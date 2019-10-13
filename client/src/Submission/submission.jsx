@@ -9,18 +9,24 @@ export class submission extends Component {
     componentDidMount() {
         fetch('/api/entries')
             .then(res => res.json())
-            .then(entries => this.setState({entries: entries}, () => console.log('entries receieved')))
+            .then(entries => this.setState({entries: entries}, () => console.log(this.state.entries)))
     }
 
     render() {
         return (
-            <div>
-                {
-                    this.state.entries.map(entry => {
-                        <DayEntry key={entry.entryID} date={entry.date} classImg={entry.classImg} 
-                         count={entry.studentCount}/>
-                    })
-                }
+            <div className="row">
+                <div className="col s1"></div>
+                <div className="col s11">
+                    <h1> This Week's History </h1>
+                    {
+                        this.state.entries.map(entry => {
+                            return(
+                                <DayEntry key={entry.entryID} date={entry.date} classImg={entry.classImg} 
+                                count={entry.studentCount}/>
+                            )
+                        })
+                    }
+                </div>
             </div>
         )
     }

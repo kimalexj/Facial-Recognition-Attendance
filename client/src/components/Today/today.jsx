@@ -22,9 +22,11 @@ export class submit extends Component {
 
     render() {
         return (
-            <div class="dashboard container">
-                <h2 className="bold center-align">{this.state.date}</h2>
-                <table class="highlight responsive-table align-center">
+            <div className="dashboard container">
+                <div className="container">
+                    <h2 className="bold center-align">{this.state.date}</h2>
+                </div>
+                <table className="highlight responsive-table align-center">
                     <thead>
                         <tr>
                             <th>Picture</th>

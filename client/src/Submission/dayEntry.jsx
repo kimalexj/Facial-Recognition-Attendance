@@ -4,18 +4,18 @@ const dayEntry = (props) => {
     let {key, date, classImg, count} = props;
 
     return (
-        <div class="card horizontal" key={key}>
+        <div class="card horizontal hoverable" key={key}>
             <div class="card-image">
-                <img src="https://lorempixel.com/100/190/nature/6" />
+                <img src={classImg} />
             </div>
             <div class="card-stacked">
                 <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.</p>
+                    <p>Attendance for {date}</p>
                 </div>
-            <div class="card-action">
-                <a href="#">This is a link</a>
+                <div class="card-action">
+                    <p>Present Count: {count}</p>
+                </div>
             </div>
-        </div>
         </div>
     )
 }
