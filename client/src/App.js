@@ -1,17 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Customers from './components/customers';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import './index.css';
+import Sidebar from './components/sidenav';
+import Home from './components/home';
+import Today from './components/Today/today';
+import Submission from './Submission/submission';
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">React Express Starter</h1>
-        </header>
-        <Customers />
+        <BrowserRouter>
+          <div className="row">
+            <div className="col s2">
+              <Sidebar />
+            </div>
+            <div className="col s10">
+              <Switch>
+                <Route exact path='/' component={Home}/>
+                <Route path='/today' component={Today}/>
+                <Route path='/submit' component={Submission}/>
+                
+                
+              </Switch>
+            </div>
+          </div>
+        </BrowserRouter>
       </div>
     );
   }
