@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  h1 #{title}
+  br
+
+  form(action="/completetask", method="post")
+    table.table.table-striped.table-bordered
+      tr
+        td Name
+        td Image
+        td Date
+        td Present
+      if (typeof tasks === "undefined")
+        tr
+          td
+      else
+        each task in tasks
+          tr
+            td #{task.name}
+            td #{task.url}
+            - var date  = new Date(task.date);
+            - var day   = date.getDate();
+            - var month = date.getMonth() + 1;
+            - var year  = date.getFullYear();
+            td #{month + "/" + day + "/" + year}
+            td
+              input(type="checkbox", name="#{task.id}", value="#{!task.present}", checked=task.present)
+    button.btn(type="submit") Update tasks
+  hr
+  form.well(action="/addtask", method="post")
+    label Student ID:
+    input(name="id", type="textbox")
+    label Student Name:
+    input(name="name", type="textbox")
+    label Image URL:
+    input(name="imageUrl", type="textbox")
+    br
+    button.btn(type="submit") Add student

@@ -36,11 +36,11 @@ export class submit extends Component {
                     <tbody>
                         {
                             this.state.students.map(student => {
-                                let picturePath = student.picture;
-
+                                //let picturePath = student.picture;
+                                console.log("THIS IS A STUDENT", student);
                                 return(
-                                    <Entry key={student.FaceID} first={student.firstname} last={student.lastname} 
-                                    picture={picturePath} present={student.present} />
+                                    <Entry key={student.id} first={student.firstName} last={student.lastName} 
+                                    picture={`images/${student.firstName}_${student.lastName}.jpg`} present={student.present} />
                                 )
                             })
                         }

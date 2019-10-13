@@ -2,6 +2,7 @@ import React from 'react';
 
 function Entry(props) {
     const {faceID, picture, first, last, present} = props;
+    console.log("PICTURE", picture);
 
     var isPresent;
     if (present) {
@@ -12,7 +13,7 @@ function Entry(props) {
 
     return(
         <tr key={faceID} className="align-center">
-            <td><img src={picture} alt="not here"/></td>
+            <td><img src={picture} height="100" width="100" alt="not here"/></td>
             <td>{first}</td>
             <td>{last}</td>
             {isPresent}
