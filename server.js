@@ -47,12 +47,12 @@ app.get('/api/attendance', taskList.showTasks.bind(taskList));
 
 app.get('/api/entries', (req, res) => {
   const students = [
-    {entryID: 1, date: '10-12-2019', classImg: 'images/profile.jpg', studentCount: 25},
-    {entryID: 1, date: '10-11-2019', classImg: 'images/profile.jpg', studentCount: 23},
-    {entryID: 1, date: '10-10-2019', classImg: 'images/profile.jpg', studentCount: 19},
-    {entryID: 1, date: '10-9-2019', classImg: 'images/profile.jpg', studentCount: 18},
-    {entryID: 1, date: '10-8-2019', classImg: 'images/profile.jpg', studentCount: 27},
-    {entryID: 1, date: '10-7-2019', classImg: 'images/profile.jpg', studentCount: 16}
+    {entryID: 1, date: '10-12-2019', classImg: 'images/bill_gates.jpg', studentCount: 25},
+    {entryID: 1, date: '10-11-2019', classImg: 'images/bill_gates.jpg', studentCount: 23},
+    {entryID: 1, date: '10-10-2019', classImg: 'images/bill_gates.jpg', studentCount: 19},
+    {entryID: 1, date: '10-9-2019', classImg: 'images/bill_gates.jpg', studentCount: 18},
+    {entryID: 1, date: '10-8-2019', classImg: 'images/bill_gates.jpg', studentCount: 27},
+    {entryID: 1, date: '10-7-2019', classImg: 'images/bill_gates.jpg', studentCount: 16}
   ];
 
   res.json(students);

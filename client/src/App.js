@@ -4,7 +4,8 @@ import './index.css';
 import Sidebar from './components/sidenav';
 import Home from './components/home';
 import Today from './components/Today/today';
-import Submission from './Submission/submission';
+import WeekData from './Week/submission';
+import Submit from './components/submit'
 
 
 class App extends Component {
@@ -20,9 +21,8 @@ class App extends Component {
               <Switch>
                 <Route exact path='/' component={Home}/>
                 <Route path='/today' component={Today}/>
-                <Route path='/week' component={Submission}/>
-                
-                
+                <Route path='/submit' component={Submit}/>
+                <Route path='/week' component={WeekData}/>
               </Switch>
             </div>
           </div>
