@@ -6,7 +6,7 @@ const dayEntry = (props) => {
     return (
         <div class="card horizontal hoverable" key={key}>
             <div class="card-image">
-                <img src={classImg} />
+                <img src={classImg} alt="class thumbnail"/>
             </div>
             <div class="card-stacked">
                 <div class="card-content">

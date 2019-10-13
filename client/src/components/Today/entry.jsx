@@ -12,12 +12,12 @@ function Entry(props) {
     }
 
     var fontStyling = {
-        fontSize: '20px',
+        fontSize: '15px',
         fontWeight: 'bold'
     }
 
     return(
-        <tr key={faceID} className="align-center">
+        <tr key={faceID} className="align-center" style={fontStyling}>
             <td><img src={picture} height="100" width="100" alt="not here"/></td>
             <td>{first}</td>
             <td>{last}</td>
