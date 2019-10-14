@@ -4,6 +4,7 @@
 - React.js
 - Azure Face API
 - Azure Cosmos DB
+- Express
 
 ## Quick Start
 ``` bash
@@ -38,3 +39,6 @@ Alexander Kim
 ### License
 
 This project is licensed under the MIT License
+
+### Recognition
+Thanks to Brad Traversy for initial repo to begin immediate backend and frontend testing.
