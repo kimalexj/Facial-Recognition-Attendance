@@ -28,9 +28,9 @@ npm run client
 
 ## App Info
 
-### Author
+### Authors
 
-Alexander Kim
+Alexander Kim, Logan Ricord, Brian Lee, Corbin Phipps
 
 ### Version
 
